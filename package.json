@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@alexmtur/one-class": "^3.0.2",
+    "@polymer/lit-element": "PolymerLabs/lit-element"
+  }
+}
