@@ -1,30 +1,32 @@
-// import {OneClass} from "@alexmtur/one-class"
 import {oneIconset} from "./one-iconset.js"
-import {html, LitElement} from "@polymer/lit-element/lit-element.js"
-// import {svg} from 'lit-html';
+import {html, LitElement} from "@polymer/lit-element"
 
 export class OneIcon extends LitElement {
     static get properties() {return {
-      icon: {type: String, value: "public"},
-      size: {type: String, value: "25px"},
-      // width: {type: String, value: "25px"},
-      // height: {type: String, value: "auto"}
+        icon: {type: String, value: "close"},
+        size: {type: String, value: "25px"},
+        viewBox: {type: String, value: "0 0 100 100"},
+        // width: {type: String, value: "25px"},
+        // height: {type: String, value: "auto"}
     }}
-
     constructor() {
-      super();
-      this.icon = 'public';
+        super();
+        this.icon = 'close';
+        this.viewBox = '0 0 100 100';
     }
-    render() {
-      console.log(oneIconset[this.icon]);
-      return html`
-        <svg viewBox="0 0 100 100" width$="${this.size}">
+    //Gradient definitions have to be put inside the one-style element
+    render() {return html`
+    <!-- <svg class="one-icon" style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#43CBFF;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#9708CC;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+        </svg> -->
+        <svg viewBox="0 0 100 100" width$="${this.size}" style="padding: 5px">
           ${oneIconset[this.icon]}
-        </svg>
-      `;
+        </svg>`;
     }
 }
-customElements.define('one-icon', OneIcon);
-
-
-   
+customElements.define('one-icon', OneIcon); 

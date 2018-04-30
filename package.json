@@ -1,6 +1,24 @@
 {
   "dependencies": {
     "@alexmtur/one-class": "^3.0.2",
-    "@polymer/lit-element": "PolymerLabs/lit-element"
-  }
+    "@polymer/lit-element": "github:PolymerLabs/lit-element"
+  },
+  "name": "@alexmtur/one-icon",
+  "version": "3.0.1",
+  "main": "one-icon.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmtur/one-icon.git"
+  },
+  "author": "Alex <alexmartinturrillas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmtur/one-icon/issues"
+  },
+  "homepage": "https://github.com/alexmtur/one-icon#readme",
+  "description": ""
 }

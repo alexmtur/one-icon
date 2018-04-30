@@ -8,22 +8,35 @@
 
 <script type="module">
     import {OneIcon} from "./one-icon.js"
+    import {oneIconset} from "./one-iconset.js"
+    import {html, LitElement} from "@polymer/lit-element"
+
+    class MyTest extends LitElement {
+// ${Object.keys(fields).forEach((key) => `${key}`); }
+        render() {
+            return html`
+            <style>
+                one-icon {
+                    fill: #F6416C;
+                    stroke: #f1f1f1;
+                    stroke-width: 2px;
+                    stroke-linejoin: round;
+                }
+            </style>
+            </svg>
+            ${Object.keys(oneIconset).map((i) => html`<one-icon icon="${i}" size="60px" class="icon"></one-icon>`)}
+            `;
+        } 
+    }
+
+    customElements.define('my-test', MyTest);
+
 </script>
 
 </head>
 <body>
-    <style>
-        .icon {
-            fill: gold;
-          stroke: coral;
-          stroke-width: 5%;
-          stroke-linejoin: round;
-        }
-    </style>
     <h1>Icon Examples: </h1>
-    <one-icon icon="chat-bubble" size="50px" class="icon"></one-icon>
-    <one-icon icon="priorities" size="50px" class="icon"></one-icon>
-    <one-icon icon="heart" size="50px" class="icon"></one-icon>
+    <my-test></my-test>
 </body>
 </html>
 
