@@ -9,11 +9,10 @@
 <script type="module">
     import {OneIcon} from "./one-icon.js"
     import {oneIconset} from "./one-iconset.js"
-    import {html, LitElement} from "@polymer/lit-element"
+    import {html, OneClass} from "@alexmtur/one-class"
 
-    class MyTest extends LitElement {
-// ${Object.keys(fields).forEach((key) => `${key}`); }
-        render() {
+    class MyTest extends OneClass {
+        _render() {
             return html`
             <style>
                 one-icon {
@@ -24,7 +23,7 @@
                 }
             </style>
             </svg>
-            ${Object.keys(oneIconset).map((i) => html`<one-icon icon="${i}" size="60px" class="icon"></one-icon>`)}
+            ${Object.keys(oneIconset).map((i) => html`<one-icon icon="${i}" size="60px" class="icon" padding="10px"></one-icon>`)}
             `;
         } 
     }

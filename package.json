@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "@alexmtur/one-class": "^3.0.2",
-    "@polymer/lit-element": "github:PolymerLabs/lit-element"
+    "@alexmtur/one-class": "^3.1.1",
+    "lit-html": "^0.9.0"
   },
   "name": "@alexmtur/one-icon",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "main": "one-icon.js",
   "devDependencies": {},
   "scripts": {
@@ -20,5 +20,9 @@
     "url": "https://github.com/alexmtur/one-icon/issues"
   },
   "homepage": "https://github.com/alexmtur/one-icon#readme",
-  "description": ""
+  "description": "",
+  "resolutions": {
+    "@polymer/polymer": "3.0.0-pre.13",
+    "@webcomponents/shadycss": "1.2.0-0"
+  }
 }
