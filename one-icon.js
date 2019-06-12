@@ -18,7 +18,7 @@ export class OneIcon extends OneClass {
         this.size = '25px';
     }
     //Gradient definitions have to be put inside the one-style element
-    _render() {return html`
+    render() {return html`
     <!-- <svg class="one-icon" style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -27,7 +27,7 @@ export class OneIcon extends OneClass {
             </linearGradient>
           </defs>
         </svg> -->
-        <svg viewBox="0 0 100 100" width$="${this.size}" style="padding: ${this.padding}">
+        <svg viewBox="0 0 100 100" width="${this.size}" style="padding: ${this.padding}">
           ${oneIconset[this.icon]}
         </svg>`;
     }
